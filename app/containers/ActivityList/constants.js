@@ -1,2 +1,0 @@
-export const GET_ACTIVITIES = 'GET_ACTIVITIES';
-export const SET_ACTIVITIES = 'SET_ACTIVITIES';

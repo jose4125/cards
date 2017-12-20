@@ -7,7 +7,6 @@ export default StyleSheets.create({
     marginTop: 20,
   },
   secondary: {
-    color: '$BuzzWhite',
     fontSize: 19,
   },
 });

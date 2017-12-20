@@ -4,8 +4,7 @@ import { View, Text, StatusBar } from 'react-native';
 
 import { Button } from '../../components/Button';
 
-import { test } from './actions';
-import styles from './styles';
+//import styles from './styles';
 
 export class Home extends React.PureComponent {
   constructor(props) {
@@ -13,7 +12,7 @@ export class Home extends React.PureComponent {
     this.goToLogIn = this.goToLogIn.bind(this);
   }
   componentDidMount() {
-    this.props.dispatch(test());
+    //this.props.dispatch(test());
   }
   
   goToLogIn() {
@@ -26,24 +25,10 @@ export class Home extends React.PureComponent {
   
   render() {
     return (
-      <View style={styles.home}>
+      <View>
         <StatusBar barStyle="light-content" />
-        <View style={styles.logo}>
+        <View>
           <Text>holaaaaaa</Text>
-        </View>
-        <View style={styles.buttons}>
-          <Button
-            type="secondary"
-            handleClick={() => this.goToSignUp()}
-          >
-            Sign Up
-          </Button>
-          <Button
-            disabled={false}
-            handleClick={() => this.goToLogIn()}
-          >
-            Log In
-          </Button>
         </View>
       </View>
     );

@@ -10,7 +10,4 @@ export default StyleSheets.create({
   secondary: {
     fontSize: 13,
   },
-  secondaryText: {
-    color: '$BuzzWhite',
-  },
 });

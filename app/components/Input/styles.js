@@ -11,8 +11,6 @@ export default StyleSheets.create({
     width: '100%',
   },
   secondary: {
-    borderBottomColor: '$BuzzWhite',
-    color: '$BuzzWhite',
     fontSize: 25,
     paddingBottom: 10,
     paddingTop: 10,

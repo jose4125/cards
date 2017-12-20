@@ -11,7 +11,6 @@ export default StyleSheets.create({
     paddingVertical: 10,
   },
   headline: {
-    color: '$BuzzWhite',
     fontSize: 20,
     fontWeight: '500',
     marginTop: 25,
@@ -25,7 +24,6 @@ export default StyleSheets.create({
     marginHorizontal: 10,
   },
   finantialText: {
-    color: '$BuzzWhite',
     fontSize: 20,
   },
 });

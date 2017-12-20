@@ -5,7 +5,7 @@ import createSagaMiddleware from 'redux-saga';
 import logger from 'redux-logger';
 
 import reducers from '../reducers';
-import rootSaga from './sagas';
+import decksSaga from '../containers/DecksList/sagas';
 
 const sagaMiddleware = createSagaMiddleware();
 const middlewares = [sagaMiddleware];
@@ -19,7 +19,7 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(...middlewares)),
 );
 
-sagaMiddleware.run(rootSaga);
+sagaMiddleware.run(decksSaga);
 
 
 export default store;

@@ -18,7 +18,6 @@ export default StyleSheets.create({
     marginRight: 5,
   },
   multiplier: {
-    color: '$BuzzWhite',
     fontSize: 12,
   },
   title: {
