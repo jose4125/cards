@@ -6,6 +6,8 @@ import logger from 'redux-logger';
 
 import reducers from '../reducers';
 import decksSaga from '../containers/DecksList/sagas';
+import deckFormSaga from '../containers/NewDeckForm/sagas';
+import cardFormSaga from '../containers/AddCardForm/sagas';
 
 const sagaMiddleware = createSagaMiddleware();
 const middlewares = [sagaMiddleware];
@@ -20,6 +22,8 @@ const store = createStore(
 );
 
 sagaMiddleware.run(decksSaga);
+sagaMiddleware.run(deckFormSaga);
+sagaMiddleware.run(cardFormSaga);
 
 
 export default store;

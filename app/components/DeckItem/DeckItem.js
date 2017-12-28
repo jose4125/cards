@@ -4,8 +4,8 @@ import { TouchableOpacity, Text } from 'react-native';
 import styles from './styles';
 
 export default props => (
-  <TouchableOpacity >
-    <Text>{props.title}</Text>
-    <Text>{props.questions.length} cards</Text>
+  <TouchableOpacity style={styles.container} onPress={props.onPress}>
+    <Text style={styles.title}>{props.data.title}</Text>
+    <Text style={styles.info}>{props.data.questions.length} cards</Text>
   </TouchableOpacity>
 )

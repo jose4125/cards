@@ -3,16 +3,10 @@ import { TextInput } from 'react-native';
 
 import styles from './styles';
 
-export default ({ type, value, secureTextEntry, onChangeText, ...restInput }) => {
-  const elementStyle = [styles.default];
-
-  if (type) {
-    elementStyle.push(styles[type]);
-  }
-
+export default ({ value, secureTextEntry, onChangeText, ...restInput }) => {
   return (
     <TextInput
-      style={elementStyle}
+      style={styles.default}
       secureTextEntry={secureTextEntry}
       onChangeText={onChangeText}
       value={value}

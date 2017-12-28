@@ -1,22 +1,22 @@
 import React from 'react';
 import { View, StatusBar } from 'react-native';
 
-import NewDeckForm from '../../containers/NewDeckForm';
+import AddCardForm from '../../containers/AddCardForm';
 
 import styles from './styles';
 
-export class NewDeck extends React.PureComponent {
+export class AddCard extends React.PureComponent {
   render() {
-    
+    console.log('props', this.props.navigation.state.params);
     return (
       <View style={styles.container}>
         <StatusBar barStyle="light-content" />
         <View>
-          <NewDeckForm navigation={this.props.navigation} />
+          <AddCardForm navigation={this.props.navigation} />
         </View>
       </View>
     );
   }
 }
 
-export default NewDeck;
+export default AddCard;
