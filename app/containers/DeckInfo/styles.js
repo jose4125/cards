@@ -2,8 +2,13 @@ import StyleSheets from 'react-native-extended-stylesheet';
 
 export default StyleSheets.create({
   title: {
-    fontSize: 35,
+    fontSize: 40,
     fontWeight: '400',
-    textAlign: 'center',
+    textAlign: 'center'
+  },
+  info: {
+    fontSize: 20,
+    color: '$CardsGray',
+    textAlign: 'center'
   },
 });

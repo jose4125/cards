@@ -1,0 +1,2 @@
+export const SELECTED_DECK = 'SELECTED_DECK';
+export const CHANGE_SAVED = 'CHANGE_SAVED';

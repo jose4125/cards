@@ -1,20 +1,16 @@
 import StyleSheets from 'react-native-extended-stylesheet';
 
 export default StyleSheets.create({
-  default: {
-    padding: 20,
-    backgroundColor: '$BuzzDarkBlue',
+  button: {
+    backgroundColor: '$CardsBlack',
+    paddingHorizontal: 15,
+    paddingVertical: 15,
+    borderRadius: 5,
+    marginTop: 20,
   },
   text: {
-    color: '$BuzzWhite',
-    fontSize: 21,
-    fontWeight: '500',
+    color: '$CardsWhite',
+    fontSize: 15,
     textAlign: 'center',
-  },
-  secondary: {
-    backgroundColor: '$BuzzLightBlue',
-  },
-  error: {
-    backgroundColor: '$BuzzLightRed',
-  },
+  }
 });

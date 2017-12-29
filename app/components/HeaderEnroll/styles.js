@@ -13,6 +13,5 @@ export default StyleSheets.create({
   },
   icon: {
     width: 18,
-    color: '$BuzzWhite',
   },
 });
