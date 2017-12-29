@@ -3,23 +3,20 @@ import { View, StatusBar } from 'react-native';
 import { NavigationActions } from 'react-navigation'
 
 import styles from './styles';
-import DeckInfo from '../../containers/DeckInfo';
+import Questions from '../../containers/Questions';
 
-class DeckDetail extends React.PureComponent {
-  static navigationOptions = ({ navigation }) => ({
-    title: `${navigation.state.params.deck.title}`,
-  });
-  
+class Quiz extends React.PureComponent {
   render() {
     const deck = this.props.navigation.state.params.deck;
+    const questions = this.props.navigation.state.params.deck.questions;
 
     return (
       <View style={styles.container}>
         <StatusBar barStyle="dark-content" />
-        <DeckInfo id={deck.title} navigation={this.props.navigation} />
+        <Questions questions={questions} navigation={this.props.navigation} />
       </View>
     );
   }
 }
 
-export default DeckDetail;
+export default Quiz;

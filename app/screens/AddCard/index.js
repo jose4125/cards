@@ -10,7 +10,7 @@ export class AddCard extends React.PureComponent {
     console.log('props', this.props.navigation.state.params);
     return (
       <View style={styles.container}>
-        <StatusBar barStyle="light-content" />
+        <StatusBar barStyle="dark-content" />
         <View>
           <AddCardForm navigation={this.props.navigation} />
         </View>
