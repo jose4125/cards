@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Alert, View } from 'react-native'
 import { connect } from 'react-redux';
 
 import { Label } from '../../components/Label';
@@ -31,10 +31,21 @@ export class NewDeckForm extends React.PureComponent {
   submit() {
     console.log(this.state);
     console.log(this.props.navigation.state.params.deck.title);
-    const deckKey = this.props.navigation.state.params.deck.title;
-    this.props.sendCard(this.state, deckKey);
-    this.props.navigation.navigate('decksDetail', { deck: this.props.navigation.state.params.deck})
-    this.setState({ question: '', answer: '' })
+    if (this.state.question && this.state.answer) {
+      const deckKey = this.props.navigation.state.params.deck.title;
+      this.props.sendCard(this.state, deckKey);
+      this.props.navigation.navigate('decksDetail', { deck: this.props.navigation.state.params.deck})
+      this.setState({ question: '', answer: '' })
+    } else {
+      Alert.alert(
+        'Missing out the question and the answer',
+        'You should add the question and the answer',
+        [
+          { text: 'OK' },
+        ],
+        { cancelable: false },
+      );
+    }
   }
 
   render() {

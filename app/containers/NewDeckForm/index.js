@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Alert } from 'react-native';
 import { connect } from 'react-redux';
 
 import { Label } from '../../components/Label';
@@ -25,14 +25,25 @@ export class NewDeckForm extends React.PureComponent {
   }
 
   handleChangeText(value) {
-    this.setState({ title: value })
+    this.setState({ title: value });
   }
 
   submit() {
     console.log(this.state);
-    this.props.sendDeck(this.state)
-    this.props.navigation.navigate('decks')
-    this.setState({ title: '' })
+    if (this.state.title) {
+      this.props.sendDeck(this.state);
+      this.props.navigation.goBack()
+      this.setState({ title: '' });
+    } else {
+      Alert.alert(
+        'Missing out Deck title',
+        'You should add the deck title',
+        [
+          { text: 'OK' },
+        ],
+        { cancelable: false },
+      );
+    }
   }
 
   render() {

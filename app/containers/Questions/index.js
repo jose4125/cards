@@ -63,6 +63,7 @@ export class Questions extends React.PureComponent {
         <Text style={styles.title}>Percentage</Text>
         <Text style={styles.title}>{percentage}%</Text>
         <Button handleClick={() => this.goToDecks()}>Go to Decks</Button>
+        <Button handleClick={() => this.props.navigation.goBack()}>Restart Quiz</Button>
       </View>
     )
   }
