@@ -8,8 +8,6 @@ import { addCardToDeck } from '../../utils/api';
 const sendCard = function* sendCard(action) {
   yield call(addCardToDeck, action.card, action.deckKey);
   yield put(changeSaved());
-  //console.log('decks =====', decks || []);
-  //yield put(storeData(JSON.parse(decks)));
 }
 
 const cardFormSaga = function* cardFormSaga() {

@@ -6,7 +6,6 @@ const selectGlobal = (state) => state.get('global');
 const makeSelectDecks = () => createSelector(
   selectDecks,
   decksState => {
-    console.log('test', decksState.get('decks').toArray());
     return decksState.get('decks').toArray();
   });
 

@@ -9,7 +9,6 @@ const fetchDecks = function* fetchDecks(action) {
   //yield put(storeMock(mock));
   //yield call(removeItem)
   const response = yield call(getDecks);
-  console.log('decks =====', decks || []);
   const decks = JSON.parse(response) || []
   yield put(storeData(decks));
 }

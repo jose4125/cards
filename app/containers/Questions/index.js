@@ -80,15 +80,4 @@ export class Questions extends React.PureComponent {
   }
 }
 
-// const mapStateToProps = createStructuredSelector({
-//   deck: makeSelectDeck(),
-// });
-
-// export function mapDispatchToProps(dispatch) {
-//   return {
-//     selectedDeck: id => dispatch(selectedDeck(id)),
-//     changeSaved: () => dispatch(changeSaved()),
-//   };
-// }
-
 export default connect()(Questions);

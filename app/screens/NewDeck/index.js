@@ -11,9 +11,7 @@ export class NewDeck extends React.PureComponent {
     return (
       <View style={styles.container}>
         <StatusBar barStyle="light-content" />
-        <View>
-          <NewDeckForm navigation={this.props.navigation} />
-        </View>
+        <NewDeckForm navigation={this.props.navigation} />
       </View>
     );
   }

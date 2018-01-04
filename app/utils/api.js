@@ -17,7 +17,6 @@ export function getDecks() {
 function getDeck(key) {
   return AsyncStorage.getItem('decks')
     .then(response => {
-      console.log('response', JSON.parse(response))
       return JSON.parse(response)[key];
   });
 }

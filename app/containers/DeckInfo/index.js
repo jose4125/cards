@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { View, Text } from 'react-native';
 import { createStructuredSelector } from "reselect";
 
-import { selectedDeck, changeSaved } from './actions';
+import * as actions from './actions';
 import { makeSelectDeck } from './selectors';
 import styles from './styles';
 
@@ -46,11 +46,4 @@ const mapStateToProps = createStructuredSelector({
   deck: makeSelectDeck(),
 });
 
-export function mapDispatchToProps(dispatch) {
-  return {
-    selectedDeck: id => dispatch(selectedDeck(id)),
-    changeSaved: () => dispatch(changeSaved()),
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(DeckInfo);
+export default connect(mapStateToProps, actions)(DeckInfo);
