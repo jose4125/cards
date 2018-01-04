@@ -32,7 +32,7 @@ export class NewDeckForm extends React.PureComponent {
     console.log(this.state);
     if (this.state.title) {
       this.props.sendDeck(this.state);
-      this.props.navigation.goBack()
+      this.props.navigation.navigate('decksDetail', { deck: this.state})
       this.setState({ title: '' });
     } else {
       Alert.alert(

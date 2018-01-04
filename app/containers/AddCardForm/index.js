@@ -34,7 +34,9 @@ export class NewDeckForm extends React.PureComponent {
     if (this.state.question && this.state.answer) {
       const deckKey = this.props.navigation.state.params.deck.title;
       this.props.sendCard(this.state, deckKey);
-      this.props.navigation.navigate('decksDetail', { deck: this.props.navigation.state.params.deck})
+      this.props.navigation.goBack()
+      //this.props.navigation.navigate('decksDetail', { deck:
+      // this.props.navigation.state.params.deck})
       this.setState({ question: '', answer: '' })
     } else {
       Alert.alert(
